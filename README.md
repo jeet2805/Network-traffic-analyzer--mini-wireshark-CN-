@@ -1,2 +1,9 @@
-# Network-traffic-analyzer--mini-wireshark-CN-
-Network Traffic Analyzer (Mini Wireshark using Python) is a terminal-based network monitoring tool designed to capture, analyze, and log real-time network packets on a local machine.
+Network Traffic Analyzer (Mini Wireshark using Python) is a terminal-based network monitoring tool designed to capture, analyze, and log real-time network packets on a local machine. The project aims to provide hands-on understanding of core Computer Networks concepts such as packet sniffing, protocol analysis, TCP/IP model, and network-layer communication by implementing a simplified version of professional tools like Wireshark.
+
+The application is developed using Python and the Scapy library. It captures live packets from the network interface and extracts key information including source IP address, destination IP address, and the communication protocol (TCP, UDP, ICMP). The analyzer displays real-time packet flow in the terminal, generates periodic traffic summaries, and maintains packet statistics to show protocol-wise distribution. Additionally, all captured data is saved into a CSV log file, enabling further offline analysis and visualization.
+
+The system is optimized for simplicity, performance, and educational use, making it ideal for students learning computer networking concepts. Unlike traditional approaches that rely only on screenshots of existing tools, this project demonstrates a complete custom implementation of a packet sniffer, offering practical exposure to real network traffic monitoring. It operates entirely in the terminal, ensuring minimal system overhead while providing clear and readable output.
+
+This project can be used for network troubleshooting, performance monitoring, protocol analysis, and educational demonstrations. It helps users understand how data flows through networks, how protocols behave, and how real-time traffic can be captured and analyzed using software-based tools.
+
+Overall, this project provides an effective and lightweight solution for real-time network traffic analysis and serves as a strong foundation for advanced network security and monitoring applications.
