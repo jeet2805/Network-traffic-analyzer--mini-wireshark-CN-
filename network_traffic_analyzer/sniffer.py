@@ -1,66 +1,3 @@
-# from scapy.all import sniff, IP, TCP, UDP, ICMP
-# from collections import defaultdict
-# import csv
-# from datetime import datetime
-
-# # Packet counters
-# protocol_count = defaultdict(int)
-# ip_count = defaultdict(int)
-
-# # CSV file setup
-# csv_file = open("logs.csv", "w", newline="")
-# csv_writer = csv.writer(csv_file)
-# csv_writer.writerow(["Time", "Source IP", "Destination IP", "Protocol"])
-
-# def get_protocol(pkt):
-#     if pkt.haslayer(TCP):
-#         return "TCP"
-#     elif pkt.haslayer(UDP):
-#         return "UDP"
-#     elif pkt.haslayer(ICMP):
-#         return "ICMP"
-#     else:
-#         return "OTHER"
-
-# packet_counter = 0
-
-# def process_packet(packet):
-#     global packet_counter
-#     if packet.haslayer(IP):
-#         src = packet[IP].src
-#         dst = packet[IP].dst
-#         proto = get_protocol(packet)
-
-#         protocol_count[proto] += 1
-#         ip_count[src] += 1
-
-#         packet_counter += 1
-
-#         # Print only every 3rd packet (slows output)
-#         if packet_counter % 3 == 0:
-#             print(f"{src:<16} → {dst:<16} | {proto}")
-
-#         time_now = datetime.now().strftime("%H:%M:%S")
-#         csv_writer.writerow([time_now, src, dst, proto])
-
-#         if packet_counter % 10 == 0:
-#             show_summary()
-
-# def show_summary():
-#     print("\n------ About Traffic------")
-#     for proto, count in protocol_count.items():
-#         print(f"{proto:<6} : {count}")
-#     print("------------------------------\n")
-
-# print("\n[+]Started...")
-# print("[+] Press CTRL + C to stop\n")
-
-# try:
-#     sniff(prn=process_packet, store=False)
-# except KeyboardInterrupt:
-#     print("\n[+] Stopped.")
-#     show_summary()
-#     csv_file.close()
 from scapy.all import sniff, IP, TCP, UDP, ICMP
 from collections import defaultdict
 from datetime import datetime
@@ -131,3 +68,4 @@ except KeyboardInterrupt:
     print("\n[+] Capture Stopped")
     print_summary()
     log_file.close()
+
